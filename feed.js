@@ -6,8 +6,10 @@ $(document).ready(
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div class = "tweet"> </div>');
-          var ago = moment().startOf(tweet.created_at).fromNow();
-          $tweet.html('@<span class="user_class">' + tweet.user + '</span>: ' + tweet.message + " tweeted " + ago);
+          var timenow = new Date().getTime();
+          var elapsedms = (timenow - tweet.created_at);
+          var elapsedS = Math.round(elapsedms / 1000);
+          $tweet.html('@<span class="user_class">' + tweet.user + '</span>' + '<br>' + tweet.message + '<br>' + '<span class="timestamp">' + elapsedS + " seconds ago" + '</span>');
           $tweet.appendTo($body);
           index -= 1;
           }
@@ -23,8 +25,10 @@ $(document).ready(function () {
       while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div class = "tweet"> </div>');
-          var ago = moment().startOf(tweet.created_at).fromNow();
-          $tweet.html('@<span class="user_class">' + tweet.user + '</span>: ' + tweet.message + " tweeted " + ago);
+          var timenow = new Date().getTime();
+          var elapsedms = (timenow - tweet.created_at);
+          var elapsedS = Math.round(elapsedms / 1000);
+          $tweet.html('@<span class="user_class">' + tweet.user + '</span>' + '<br>' + tweet.message + '<br>' + '<span class="timestamp">' + elapsedS + " seconds ago" + '</span>');
           $tweet.appendTo($body);
           index -= 1;
           }
@@ -43,7 +47,7 @@ $(document).ready(function () {
           if (username == tweet.user) {
           var $tweet = $('<div class = "tweet"> </div>');
           var ago = moment().startOf(tweet.created_at).fromNow();
-          $tweet.html('@<span class="user_class">' + tweet.user + '</span>: ' + tweet.message + " tweeted " + ago);
+          $tweet.html('@<span class="user_class">' + tweet.user + '</span>' + '<br>' + tweet.message + '<br>' + '<span class="timestamp">' + elapsedS + " seconds ago" + '</span>');
           $tweet.appendTo($body);
           index -= 1;
           }
