@@ -73,14 +73,14 @@ body {
 	font: 300 50px "Lato", "Open Sans";
 	color: white;
 	text-decoration: none;
-	padding: 5px 5px 5px 5px ;
-	margin-bottom: 25px;
+	padding: 10px;
 	display: inline-block;
 	width: 100%;
 	vertical-align: center;
-	background: black;
-	height: 100px;
+	background: white;
+	height: 75px;
 	text-align: center;
+
 }
 
 .tweet {
@@ -91,6 +91,17 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
+	margin-top: 10px;
 	text-align: center;
 	vertical-align: center;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1)));
+}
+
+.tweetbox {
+	background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%);
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
